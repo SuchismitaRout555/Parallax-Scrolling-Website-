@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.background {
+    transform: translateZ(-40px) scale(5);
+    /* img dur ho jayega background wala and scale is for duur se bada karna h img  */
+
+}
+
+.foregrouund {
+    transform: translateZ(-20px) scale(3);
+}
+
+.container {
+    position: relative;
+    /* for two img overlap karne absolute (non-static ) */
+    display: flex;
+    /*  */
+    justify-content: center;
+    /*element ko center main */
+    align-items: center;
+    /* element ko center main*/
+    height: 100%;
+    /*  */
+    z-index: -1;
+    /* overlapping k liye konsi img kis k uper ayega  */
+    transform-style: preserve-3d;
+    /*  jis v container mai 3d add karne h oha difine karo */
+}
+
+.background,
+.foregrouund {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    /* pura width cover kar legi img */
+
+
+}
+
+h1 {
+    position: absolute;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 5rem;
+    letter-spacing: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.sec {
+    font-size: 5rem;
+    padding: 10rem;
+
+}
+
+.bg1 {
+    background-image: url(sport-1.jpg);
+}
+
+.bg2 {
+    background-image: url(sport-2.jpg);
+}
+
+.bg3 {
+    background-image: url(sport-3.jpg);
+}
+
+.text {
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    /* for img fixed  rehti h bass uper ki element scrool karti h  agar nhi hota to img v elemt k sath scroll  hoti */
+    height: 500px;
+    background-size: cover;
+    /* all cover the img in screen best way */
+    background-position: center;
+    /* for img center in best way */
+    background-size: cover;
+    /* for photo ko screen cover karle achse */
+}
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    transform: translate(-50%);
+
+}
